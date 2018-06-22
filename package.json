@@ -1,0 +1,58 @@
+{
+    "name": "perfect-code",
+    "displayName": "perfect-code",
+    "description": "Perfect start for all in one vs code",
+    "version": "1.0.0",
+    "publisher": "gauravds",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": ["Extension Packs"],
+    "icon": "images/perfect-code.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dayitv89/perfect-code"
+    },
+    "keywords": [
+        "React", 
+        "React JS", 
+        "React Snippets", 
+        "React Native", 
+        "Node", 
+        "Node JS", 
+        "Atom", 
+        "AdonisJS", 
+        "Solarize", 
+        "Cool coding", 
+        "all in one",
+        "full package", 
+        "all extension"
+    ],
+    "extensionDependencies": [
+        "2gua.rainbow-brackets": "0.0.6",
+        "alexdima.copy-relative-path": "0.0.2",
+        "brofox86.theme-espresso-soda-solarized": "3.0.0",
+        "christian-kohler.path-intellisense": "1.4.2",
+        "dbaeumer.vscode-eslint": "1.4.12",
+        "esbenp.prettier-vscode": "1.5.0",
+        "formulahendry.auto-close-tag": "0.5.6",
+        "formulahendry.auto-complete-tag": "0.0.2",
+        "formulahendry.auto-rename-tag": "0.0.15",
+        "formulahendry.code-runner": "0.9.3",
+        "Hridoy.adonisjs-snippets": "1.0.2",
+        "jundat95.react-native-snippet": "0.4.3",
+        "luongnd.edge": "0.2.0",
+        "mgmcdermott.vscode-language-babel": "0.0.17",
+        "mikestead.dotenv": "1.0.1",
+        "ms-vscode.atom-keybindings": "3.0.4",
+        "ms-vscode.cpptools": "0.17.5",
+        "ms-vscode.node-debug2": "1.24.2",
+        "msjsdiag.debugger-for-chrome": "4.6.0",
+        "naumovs.color-highlight": "2.3.0",
+        "PKief.material-icon-theme": "3.5.0",
+        "streetsidesoftware.code-spell-checker": "1.6.10",
+        "waderyan.gitblame": "2.4.2",
+        "wayou.vscode-todo-highlight": "0.5.12",
+        "wmaurer.change-case": "1.0.0"
+    ]
+}

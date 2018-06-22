@@ -1,14 +1,7 @@
-<img src="images/perfect-code.png" alt="drawing" width="200px"/>
+# Change Log
+All notable changes to the "perfect-code" extension will be documented in this file.
 
-# perfect-code [VSCode Extension]
-
-[![v1.0.0](https://img.shields.io/badge/Latest_release-v1.0.0-green.svg?style=flat)](./CHANGELOG.md)
-
-All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot. 
-
-#### Advantages to switch VSCode: 
-- In build debugger for node/ react-native and almost every language.
-- More lighter than atom/ sublime
+[![v1.0.0](https://img.shields.io/badge/Latest_release-v1.0.0-green.svg?style=flat)](./changelog/v1_0_0.md)
 
 ### Initial release with following extension:
 Extension Name
@@ -39,7 +32,7 @@ Solarized Espresso Soda 3.0.0
 TODO Highlight 0.5.12
 ```
 
-Extension detail: `$ code --list-extensions --show-versions`
+Extension detail: `code --list-extensions --show-versions`
 ```
 2gua.rainbow-brackets@0.0.6
 alexdima.copy-relative-path@0.0.2
