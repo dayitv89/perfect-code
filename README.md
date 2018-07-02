@@ -1,17 +1,20 @@
-<img src="images/perfect-code.png" alt="drawing" width="200px"/>
+<img src="https://raw.githubusercontent.com/dayitv89/perfect-code/master/images/perfect-code.png" alt="drawing" width="200px"/>
 
 # perfect-code [VSCode Extension]
 
-[![v1.0.0](https://img.shields.io/badge/Latest_release-v1.0.0-green.svg?style=flat)](./CHANGELOG.md)
+[![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.1-green.svg?style=flat)](./CHANGELOG.md)
 
-All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot. 
+All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot.
 
-#### Advantages to switch VSCode: 
+#### Advantages to switch VSCode:
+
 - In build debugger for node/ react-native and almost every language.
 - More lighter than atom/ sublime
 
 ### Initial release with following extension:
+
 Extension Name
+
 ```js
 AdonisJS 1.0.2
 Atom Keymap 3.0.4
@@ -35,11 +38,13 @@ Path Intellisense 1.4.2
 Prettier - Code formatter 1.5.0
 Rainbow Brackets 0.0.6
 React Native Snippet 0.4.3
+React Native Tools 0.6.11
 Solarized Espresso Soda 3.0.0
 TODO Highlight 0.5.12
 ```
 
 Extension detail: `$ code --list-extensions --show-versions`
+
 ```
 2gua.rainbow-brackets@0.0.6
 alexdima.copy-relative-path@0.0.2
@@ -63,76 +68,69 @@ msjsdiag.debugger-for-chrome@4.6.0
 naumovs.color-highlight@2.3.0
 PKief.material-icon-theme@3.5.0
 streetsidesoftware.code-spell-checker@1.6.10
+vsmobile.vscode-react-native@0.6.11
 waderyan.gitblame@2.4.2
 wayou.vscode-todo-highlight@0.5.12
 wmaurer.change-case@1.0.0
 ```
 
 ### User Setting (VSCode -> Preferences -> Settings -> User Settings)
+
 ```json
 {
-    "window.zoomLevel": 0,
-    "atomKeymap.promptV3Features": true,
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": true,
-    "prettier.printWidth": 120,
-    "prettier.useTabs": true,
-    "prettier.singleQuote": true,
-    "cSpell.ignoreWords": [
-        "punchh",
-        "reactotron",
-        "proto",
-        "props",
-        "reactnative",
-        "gaurav",
-        "sharma"
-    ],
-    "editor.renderWhitespace": "boundary",
-    "editor.insertSpaces": false,
-    "editor.rulers": [
-        120
-    ],
-    "search.useIgnoreFiles": false,
-    "search.quickOpen.includeSymbols": false,
-    "search.exclude": {
-        "**/node_modules": false,
-        "**/bower_components": true
-    },
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": false,
-    "explorer.confirmDelete": false,
-    "search.location": "sidebar",
-    "emmet.includeLanguages": {
-        "vue-html": "html",
-        "edge": "javascriptreact"
-    },
-    "workbench.startupEditor": "welcomePage",
-    "launch": {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "name": "Debug react native",
-                "program": "${workspaceRoot}/.vscode/launchReactNative.js",
-                "type": "reactnative",
-                "request": "attach",
-                "sourceMaps": true,
-                "outDir": "${workspaceRoot}/.vscode/.react"
-            },
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "debug node",
-                "program": "${file}"
-            }
-        ]
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Solarized Espresso Soda"
+	"window.zoomLevel": 0,
+	"atomKeymap.promptV3Features": true,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"prettier.printWidth": 120,
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"cSpell.ignoreWords": ["punchh", "reactotron", "proto", "props", "reactnative", "gaurav", "sharma"],
+	"editor.renderWhitespace": "boundary",
+	"editor.insertSpaces": false,
+	"editor.rulers": [120],
+	"search.useIgnoreFiles": false,
+	"search.quickOpen.includeSymbols": false,
+	"search.exclude": {
+		"**/node_modules": false,
+		"**/bower_components": true
+	},
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"explorer.confirmDragAndDrop": false,
+	"extensions.ignoreRecommendations": false,
+	"explorer.confirmDelete": false,
+	"search.location": "sidebar",
+	"emmet.includeLanguages": {
+		"vue-html": "html",
+		"edge": "javascriptreact"
+	},
+	"workbench.startupEditor": "welcomePage",
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Debug react native",
+				"program": "${workspaceRoot}/.vscode/launchReactNative.js",
+				"type": "reactnative",
+				"request": "attach",
+				"sourceMaps": true,
+				"outDir": "${workspaceRoot}/.vscode/.react"
+			},
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "debug node",
+				"program": "${file}"
+			}
+		]
+	},
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Solarized Espresso Soda"
 }
 ```
 
 ### `Keybindings.json` shortcuts (VSCode -> Preferences -> Keyboard Shortcuts -> [edit] Keybindings.json)
+
 ```json
 [
 	{
@@ -152,6 +150,7 @@ wmaurer.change-case@1.0.0
 ```
 
 ### Code snippets (VSCode -> Preferences -> User Snippets -> New Global Snippets file)
+
 ```json
 {
 	"JSON Print": {
@@ -165,11 +164,7 @@ wmaurer.change-case@1.0.0
 	},
 	"Export stmt": {
 		"prefix": "mex",
-		"body": [
-			"module.exports = {",
-			"${1:export}",
-			"};"
-		]
+		"body": ["module.exports = {", "${1:export}", "};"]
 	}
 }
 ```

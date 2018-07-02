@@ -1,58 +1,61 @@
 {
-    "name": "perfect-code",
-    "displayName": "perfect-code",
-    "description": "Perfect start for all in one vs code",
-    "version": "1.0.0",
-    "publisher": "gauravds",
-    "engines": {
-        "vscode": "^1.24.0"
-    },
-    "categories": ["Extension Packs"],
-    "icon": "images/perfect-code.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dayitv89/perfect-code"
-    },
-    "keywords": [
-        "React", 
-        "React JS", 
-        "React Snippets", 
-        "React Native", 
-        "Node", 
-        "Node JS", 
-        "Atom", 
-        "AdonisJS", 
-        "Solarize", 
-        "Cool coding", 
-        "all in one",
-        "full package", 
-        "all extension"
-    ],
-    "extensionDependencies": [
-        "2gua.rainbow-brackets",
-        "alexdima.copy-relative-path",
-        "brofox86.theme-espresso-soda-solarized",
-        "christian-kohler.path-intellisense",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "formulahendry.auto-close-tag",
-        "formulahendry.auto-complete-tag",
-        "formulahendry.auto-rename-tag",
-        "formulahendry.code-runner",
-        "Hridoy.adonisjs-snippets",
-        "jundat95.react-native-snippet",
-        "luongnd.edge",
-        "mgmcdermott.vscode-language-babel",
-        "mikestead.dotenv",
-        "ms-vscode.atom-keybindings",
-        "ms-vscode.cpptools",
-        "ms-vscode.node-debug2",
-        "msjsdiag.debugger-for-chrome",
-        "naumovs.color-highlight",
-        "PKief.material-icon-theme",
-        "streetsidesoftware.code-spell-checker",
-        "waderyan.gitblame",
-        "wayou.vscode-todo-highlight",
-        "wmaurer.change-case"
-    ]
+	"name": "perfect-code",
+	"displayName": "perfect-code",
+	"description": "Perfect start for all in one vs code",
+	"version": "1.0.1",
+	"publisher": "gauravds",
+	"engines": {
+		"vscode": "^1.24.0"
+	},
+	"categories": [
+		"Extension Packs"
+	],
+	"icon": "images/perfect-code.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dayitv89/perfect-code"
+	},
+	"keywords": [
+		"React",
+		"React JS",
+		"React Snippets",
+		"React Native",
+		"Node",
+		"Node JS",
+		"Atom",
+		"AdonisJS",
+		"Solarize",
+		"Cool coding",
+		"all in one",
+		"full package",
+		"all extension"
+	],
+	"extensionDependencies": [
+		"2gua.rainbow-brackets",
+		"alexdima.copy-relative-path",
+		"brofox86.theme-espresso-soda-solarized",
+		"christian-kohler.path-intellisense",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-complete-tag",
+		"formulahendry.auto-rename-tag",
+		"formulahendry.code-runner",
+		"Hridoy.adonisjs-snippets",
+		"jundat95.react-native-snippet",
+		"luongnd.edge",
+		"mgmcdermott.vscode-language-babel",
+		"mikestead.dotenv",
+		"ms-vscode.atom-keybindings",
+		"ms-vscode.cpptools",
+		"ms-vscode.node-debug2",
+		"msjsdiag.debugger-for-chrome",
+		"naumovs.color-highlight",
+		"PKief.material-icon-theme",
+		"streetsidesoftware.code-spell-checker",
+		"vsmobile.vscode-react-native",
+		"waderyan.gitblame",
+		"wayou.vscode-todo-highlight",
+		"wmaurer.change-case"
+	]
 }
