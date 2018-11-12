@@ -2,13 +2,15 @@
 	"name": "perfect-code",
 	"displayName": "perfect-code",
 	"description": "Perfect start for all in one vs code",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "gauravds",
 	"engines": {
-		"vscode": "^1.24.0"
+		"vscode": "^1.25.0"
 	},
 	"categories": [
-		"Extension Packs"
+		"Extension Packs",
+		"Snippets",
+		"Keymaps"
 	],
 	"icon": "images/perfect-code.png",
 	"repository": {
@@ -28,7 +30,9 @@
 		"Cool coding",
 		"all in one",
 		"full package",
-		"all extension"
+		"all extension",
+		"Snippets",
+		"Keymaps"
 	],
 	"extensionDependencies": [
 		"2gua.rainbow-brackets",
@@ -41,7 +45,6 @@
 		"formulahendry.auto-complete-tag",
 		"formulahendry.auto-rename-tag",
 		"formulahendry.code-runner",
-		"Hridoy.adonisjs-snippets",
 		"jundat95.react-native-snippet",
 		"luongnd.edge",
 		"mgmcdermott.vscode-language-babel",
@@ -56,6 +59,51 @@
 		"vsmobile.vscode-react-native",
 		"waderyan.gitblame",
 		"wayou.vscode-todo-highlight",
-		"wmaurer.change-case"
-	]
+		"wmaurer.change-case",
+		"orta.vscode-jest"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets.json"
+			}
+		],
+		"keybindings": [
+			{
+				"mac": "cmd+k",
+				"win": "ctrl+k",
+				"linux": "ctrl+k",
+				"key": "cmd+k",
+				"command": "workbench.debug.panel.action.clearReplAction",
+				"when": "inDebugRepl"
+			},
+			{
+				"mac": "cmd+j",
+				"win": "ctrl+j",
+				"linux": "ctrl+j",
+				"key": "cmd+j",
+				"command": "workbench.action.togglePanel"
+			},
+			{
+				"mac": "cmd+j",
+				"win": "ctrl+j",
+				"linux": "ctrl+j",
+				"key": "cmd+j",
+				"command": "-workbench.action.togglePanel"
+			}
+		]
+	}
 }

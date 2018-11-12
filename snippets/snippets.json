@@ -1,0 +1,51 @@
+{
+	"Default react-native header": {
+		"prefix": "rnh",
+		"body": [
+			"/**",
+			" * Copyright (c) 2017-Present, Punchh, Inc.",
+			" * All rights reserved.",
+			" *",
+			" * @flow",
+			" */",
+			"'use strict';"
+		]
+	},
+	"Default GDS react-native header": {
+		"prefix": "gds",
+		"body": [
+			"/**",
+			" * Copyright (c) 2017-Present, Gaurav D. Sharma",
+			" * All rights reserved.",
+			" *",
+			" * @flow",
+			" */",
+			"'use strict';"
+		]
+	},
+	"JSON Print": {
+		"prefix": "json",
+		"scope": "javascript,typescript",
+		"body": "JSON.stringify(${1:object}, null, 2)"
+	},
+	"Import Print": {
+		"prefix": "imt",
+		"body": "import ${1:module} from '${1:module}';"
+	},
+	"Export stmt": {
+		"prefix": "mex",
+		"body": ["module.exports = {", "${1:export}", "};"]
+	},
+	"Export class stmt": {
+		"prefix": "cex",
+		"body": [
+			"${1:export}.propTypes = {",
+			"};",
+			"",
+			"{1:export}.defaultProps = {",
+			"};",
+			"",
+			"export default {1:export};"
+		]
+	}
+}

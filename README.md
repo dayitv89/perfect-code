@@ -2,7 +2,7 @@
 
 # perfect-code [VSCode Extension]
 
-[![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.1-green.svg?style=flat)](./CHANGELOG.md)
+[![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.2-green.svg?style=flat)](./CHANGELOG.md)
 
 All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot.
 
@@ -16,31 +16,31 @@ All in one place to good start with VSCode. If you came from Atom/Sublime and mo
 Extension Name
 
 ```js
-AdonisJS 1.0.2
-Atom Keymap 3.0.4
-Auto close Tag 0.5.6
-Auto Complete Tag 0.0.2
-Auto Rename Tag 0.0.15
-Babel JavaScript 0.0.17
-C/C++ 0.17.5
-change-case 1.0.0
-Code Runner 0.9.3
-Code Spell Checker 1.6.10
-Color Highlight 2.3.0
-Copy Relative Path 0.0.2
-Debugger For Chrome 4.6.0
-DotENV 1.0.1
-Edge template Support 0.2.0
-Git Blame 2.4.2
-Material Icon Theme 3.5.0
-Node Debug 1.24.2
-Path Intellisense 1.4.2
-Prettier - Code formatter 1.5.0
-Rainbow Brackets 0.0.6
-React Native Snippet 0.4.3
-React Native Tools 0.6.11
-Solarized Espresso Soda 3.0.0
-TODO Highlight 0.5.12
+Atom Keymap
+Auto close Tag
+Auto Complete Tag
+Auto Rename Tag
+Babel JavaScript
+C/C++
+change-case
+Code Runner
+Code Spell Checker
+Color Highlight
+Copy Relative Path
+Debugger For Chrome
+DotENV
+Edge template Support
+Git Blame
+Material Icon Theme
+Node Debug
+Path Intellisense
+Prettier - Code formatter
+Rainbow Brackets
+React Native Snippet
+React Native Tools
+Solarized Espresso Soda
+TODO Highlight
+Jest
 ```
 
 Extension detail: `$ code --list-extensions --show-versions`
@@ -56,7 +56,6 @@ formulahendry.auto-close-tag@0.5.6
 formulahendry.auto-complete-tag@0.0.2
 formulahendry.auto-rename-tag@0.0.15
 formulahendry.code-runner@0.9.3
-Hridoy.adonisjs-snippets@1.0.2
 jundat95.react-native-snippet@0.4.3
 luongnd.edge@0.2.0
 mgmcdermott.vscode-language-babel@0.0.17
@@ -72,6 +71,7 @@ vsmobile.vscode-react-native@0.6.11
 waderyan.gitblame@2.4.2
 wayou.vscode-todo-highlight@0.5.12
 wmaurer.change-case@1.0.0
+orta.vscode-jest
 ```
 
 ### User Setting (VSCode -> Preferences -> Settings -> User Settings)
@@ -89,6 +89,7 @@ wmaurer.change-case@1.0.0
 	"editor.renderWhitespace": "boundary",
 	"editor.insertSpaces": false,
 	"editor.rulers": [120],
+	"search.location": "panel",
 	"search.useIgnoreFiles": false,
 	"search.quickOpen.includeSymbols": false,
 	"search.exclude": {
@@ -99,7 +100,6 @@ wmaurer.change-case@1.0.0
 	"explorer.confirmDragAndDrop": false,
 	"extensions.ignoreRecommendations": false,
 	"explorer.confirmDelete": false,
-	"search.location": "sidebar",
 	"emmet.includeLanguages": {
 		"vue-html": "html",
 		"edge": "javascriptreact"
@@ -153,6 +153,30 @@ wmaurer.change-case@1.0.0
 
 ```json
 {
+	"Default react-native header": {
+		"prefix": "rnh",
+		"body": [
+			"/**",
+			" * Copyright (c) 2017-Present, Punchh, Inc.",
+			" * All rights reserved.",
+			" *",
+			" * @flow",
+			" */",
+			"'use strict';"
+		]
+	},
+	"Default GDS react-native header": {
+		"prefix": "gds",
+		"body": [
+			"/**",
+			" * Copyright (c) 2017-Present, Gaurav D. Sharma",
+			" * All rights reserved.",
+			" *",
+			" * @flow",
+			" */",
+			"'use strict';"
+		]
+	},
 	"JSON Print": {
 		"prefix": "json",
 		"scope": "javascript,typescript",
@@ -165,6 +189,18 @@ wmaurer.change-case@1.0.0
 	"Export stmt": {
 		"prefix": "mex",
 		"body": ["module.exports = {", "${1:export}", "};"]
+	},
+	"Export class stmt": {
+		"prefix": "cex",
+		"body": [
+			"${1:export}.propTypes = {",
+			"};",
+			"",
+			"{1:export}.defaultProps = {",
+			"};",
+			"",
+			"export default {1:export};"
+		]
 	}
 }
 ```
