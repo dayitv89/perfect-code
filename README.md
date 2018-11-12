@@ -85,7 +85,7 @@ orta.vscode-jest
 	"prettier.printWidth": 120,
 	"prettier.useTabs": true,
 	"prettier.singleQuote": true,
-	"cSpell.ignoreWords": ["punchh", "reactotron", "proto", "props", "reactnative", "gaurav", "sharma"],
+	"cSpell.ignoreWords": ["reactotron", "proto", "props", "reactnative", "gaurav", "sharma"],
 	"editor.renderWhitespace": "boundary",
 	"editor.insertSpaces": false,
 	"editor.rulers": [120],
@@ -153,18 +153,6 @@ orta.vscode-jest
 
 ```json
 {
-	"Default react-native header": {
-		"prefix": "rnh",
-		"body": [
-			"/**",
-			" * Copyright (c) 2017-Present, Punchh, Inc.",
-			" * All rights reserved.",
-			" *",
-			" * @flow",
-			" */",
-			"'use strict';"
-		]
-	},
 	"Default GDS react-native header": {
 		"prefix": "gds",
 		"body": [

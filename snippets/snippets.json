@@ -1,16 +1,4 @@
 {
-	"Default react-native header": {
-		"prefix": "rnh",
-		"body": [
-			"/**",
-			" * Copyright (c) 2017-Present, Punchh, Inc.",
-			" * All rights reserved.",
-			" *",
-			" * @flow",
-			" */",
-			"'use strict';"
-		]
-	},
 	"Default GDS react-native header": {
 		"prefix": "gds",
 		"body": [
