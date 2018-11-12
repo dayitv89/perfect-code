@@ -2,7 +2,7 @@
 	"name": "perfect-code",
 	"displayName": "perfect-code",
 	"description": "Perfect start for all in one vs code",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "gauravds",
 	"engines": {
 		"vscode": "^1.25.0"

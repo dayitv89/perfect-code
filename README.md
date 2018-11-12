@@ -2,7 +2,7 @@
 
 # perfect-code [VSCode Extension]
 
-[![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.2-green.svg?style=flat)](./CHANGELOG.md)
+[![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.3-green.svg?style=flat)](./CHANGELOG.md)
 
 All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot.
 
