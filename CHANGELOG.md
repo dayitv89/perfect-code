@@ -2,6 +2,20 @@
 
 All notable changes to the "perfect-code" extension will be documented in this file.
 
+![v1.1.0](https://img.shields.io/badge/Release-v1.1.0-green.svg?style=flat)
+
+### Release with following extension:
+
+Extension Name
+
+```js
+ProtoMaker;
+```
+
+```
+vikramvk.protomaker
+```
+
 [![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.1-green.svg?style=flat)](./changelog/v1_0_1.md)
 
 ### Release with following extension:

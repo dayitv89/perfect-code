@@ -2,7 +2,7 @@
 
 # perfect-code [VSCode Extension]
 
-[![v1.0.1](https://img.shields.io/badge/Latest_release-v1.0.4-green.svg?style=flat)](./CHANGELOG.md)
+[![v1.1.2](https://img.shields.io/badge/Latest_release-v1.1.2-green.svg?style=flat)](./CHANGELOG.md)
 
 All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot.
 
@@ -41,37 +41,39 @@ React Native Tools
 Solarized Espresso Soda
 TODO Highlight
 Jest
+ProtoMaker
 ```
 
 Extension detail: `$ code --list-extensions --show-versions`
 
 ```
-2gua.rainbow-brackets@0.0.6
-alexdima.copy-relative-path@0.0.2
-brofox86.theme-espresso-soda-solarized@3.0.0
-christian-kohler.path-intellisense@1.4.2
-dbaeumer.vscode-eslint@1.4.12
-esbenp.prettier-vscode@1.5.0
-formulahendry.auto-close-tag@0.5.6
-formulahendry.auto-complete-tag@0.0.2
-formulahendry.auto-rename-tag@0.0.15
-formulahendry.code-runner@0.9.3
-jundat95.react-native-snippet@0.4.3
-luongnd.edge@0.2.0
-mgmcdermott.vscode-language-babel@0.0.17
-mikestead.dotenv@1.0.1
-ms-vscode.atom-keybindings@3.0.4
-ms-vscode.cpptools@0.17.5
-ms-vscode.node-debug2@1.24.2
-msjsdiag.debugger-for-chrome@4.6.0
-naumovs.color-highlight@2.3.0
-PKief.material-icon-theme@3.5.0
-streetsidesoftware.code-spell-checker@1.6.10
-vsmobile.vscode-react-native@0.6.11
-waderyan.gitblame@2.4.2
-wayou.vscode-todo-highlight@0.5.12
-wmaurer.change-case@1.0.0
+2gua.rainbow-brackets
+alexdima.copy-relative-path
+brofox86.theme-espresso-soda-solarized
+christian-kohler.path-intellisense
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-complete-tag
+formulahendry.auto-rename-tag
+formulahendry.code-runner
+jundat95.react-native-snippet
+luongnd.edge
+mgmcdermott.vscode-language-babel
+mikestead.dotenv
+ms-vscode.atom-keybindings
+ms-vscode.cpptools
+ms-vscode.node-debug2
+msjsdiag.debugger-for-chrome
+naumovs.color-highlight
+PKief.material-icon-theme
+streetsidesoftware.code-spell-checker
+vsmobile.vscode-react-native
+waderyan.gitblame
+wayou.vscode-todo-highlight
+wmaurer.change-case
 orta.vscode-jest
+vikramvk.protomaker
 ```
 
 ### User Setting (VSCode -> Preferences -> Settings -> User Settings)
@@ -85,8 +87,22 @@ orta.vscode-jest
 	"prettier.printWidth": 120,
 	"prettier.useTabs": true,
 	"prettier.singleQuote": true,
-	"cSpell.ignoreWords": ["reactotron", "proto", "props", "reactnative", "gaurav", "sharma"],
-	"editor.renderWhitespace": "boundary",
+	"cSpell.ignoreWords": [
+		"punchh",
+		"reactotron",
+		"proto",
+		"props",
+		"reactnative",
+		"gaurav",
+		"sharma",
+		"redeemable",
+		"Signup",
+		"redeemables",
+		"gorm",
+		"repo",
+		"repos"
+	],
+	"editor.renderWhitespace": "all",
 	"editor.insertSpaces": false,
 	"editor.rulers": [120],
 	"search.location": "panel",
@@ -109,23 +125,77 @@ orta.vscode-jest
 		"version": "0.2.0",
 		"configurations": [
 			{
+				"type": "node",
+				"request": "launch",
+				"name": "adonis",
+				"program": "${workspaceFolder}/server.js"
+			},
+			{
 				"name": "Debug react native",
 				"program": "${workspaceRoot}/.vscode/launchReactNative.js",
 				"type": "reactnative",
 				"request": "attach",
 				"sourceMaps": true,
-				"outDir": "${workspaceRoot}/.vscode/.react"
+				"outDir": "${workspaceRoot}/.vscode/.react",
+				"runtimeArgs": ["--preserve-symlinks"]
 			},
 			{
 				"type": "node",
 				"request": "launch",
 				"name": "debug node",
 				"program": "${file}"
+			},
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Launch nodejs server.js",
+				"program": "${workspaceFolder}/server.js"
+			},
+			{
+				"type": "node",
+				"request": "attach",
+				"name": "node attach to process",
+				"processId": "${command:PickProcess}"
+			},
+			{
+				"type": "node",
+				"request": "attach",
+				"name": "Node: Nodemon",
+				"processId": "${command:PickProcess}",
+				"restart": true,
+				"protocol": "inspector"
+			},
+			{
+				"name": "golang app.go",
+				"type": "go",
+				"request": "launch",
+				"mode": "auto",
+				"program": "${workspaceRoot}/app.go",
+				"env": {},
+				"args": []
+			},
+			{
+				"name": "golang",
+				"type": "go",
+				"request": "launch",
+				"mode": "debug",
+				"program": "${file}"
 			}
 		]
 	},
 	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Solarized Espresso Soda"
+	"workbench.colorTheme": "Solarized Espresso Soda",
+	"editor.minimap.enabled": false,
+	"breadcrumbs.enabled": true,
+	"prettier.disableLanguages": ["vue", "html"],
+	"liveServer.settings.donotShowInfoMsg": true,
+	"liveServer.settings.donotVerifyTags": true,
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"java.errors.incompleteClasspath.severity": "ignore",
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"javascript.suggest.autoImports": false,
+	"terminal.integrated.shell.osx": "/bin/bash"
 }
 ```
 
@@ -134,17 +204,19 @@ orta.vscode-jest
 ```json
 [
 	{
+		"mac": "cmd+k",
+		"win": "ctrl+k",
+		"linux": "ctrl+k",
 		"key": "cmd+k",
 		"command": "workbench.debug.panel.action.clearReplAction",
 		"when": "inDebugRepl"
 	},
 	{
+		"mac": "cmd+j",
+		"win": "ctrl+j",
+		"linux": "ctrl+j",
 		"key": "cmd+j",
 		"command": "workbench.action.togglePanel"
-	},
-	{
-		"key": "cmd+j",
-		"command": "-workbench.action.togglePanel"
 	}
 ]
 ```
@@ -153,17 +225,21 @@ orta.vscode-jest
 
 ```json
 {
-	"Default GDS react-native header": {
-		"prefix": "gds",
+	"Default react-native header": {
+		"prefix": "rnp",
 		"body": [
 			"/**",
-			" * Copyright (c) 2017-Present, Gaurav D. Sharma",
+			" * Copyright (c) 2017-Present, Punchh, Inc.",
 			" * All rights reserved.",
 			" *",
 			" * @flow",
 			" */",
 			"'use strict';"
 		]
+	},
+	"Default tron log": {
+		"prefix": "tron",
+		"body": "console.tron.log(${1:log});"
 	},
 	"JSON Print": {
 		"prefix": "json",

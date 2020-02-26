@@ -2,10 +2,10 @@
 	"name": "perfect-code",
 	"displayName": "perfect-code",
 	"description": "Perfect start for all in one vs code",
-	"version": "1.0.4",
+	"version": "1.1.2",
 	"publisher": "gauravds",
 	"engines": {
-		"vscode": "^1.25.0"
+		"vscode": "^1.35.1"
 	},
 	"categories": [
 		"Extension Packs",
@@ -60,7 +60,8 @@
 		"waderyan.gitblame",
 		"wayou.vscode-todo-highlight",
 		"wmaurer.change-case",
-		"orta.vscode-jest"
+		"orta.vscode-jest",
+		"vikramvk.protomaker"
 	],
 	"contributes": {
 		"snippets": [
@@ -96,13 +97,6 @@
 				"linux": "ctrl+j",
 				"key": "cmd+j",
 				"command": "workbench.action.togglePanel"
-			},
-			{
-				"mac": "cmd+j",
-				"win": "ctrl+j",
-				"linux": "ctrl+j",
-				"key": "cmd+j",
-				"command": "-workbench.action.togglePanel"
 			}
 		]
 	}

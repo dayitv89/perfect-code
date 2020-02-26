@@ -11,6 +11,10 @@
 			"'use strict';"
 		]
 	},
+	"Default tron log": {
+		"prefix": "tron",
+		"body": "console.tron.log(${1:log});"
+	},
 	"JSON Print": {
 		"prefix": "json",
 		"scope": "javascript,typescript",
