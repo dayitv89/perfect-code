@@ -41,6 +41,7 @@
 		"christian-kohler.path-intellisense",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
+		"svipas.prettier-plus",
 		"formulahendry.auto-close-tag",
 		"formulahendry.auto-complete-tag",
 		"formulahendry.auto-rename-tag",
