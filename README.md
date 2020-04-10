@@ -2,14 +2,14 @@
 
 # perfect-code [VSCode Extension]
 
-[![v1.1.2](https://img.shields.io/badge/Latest_release-v1.1.2-green.svg?style=flat)](./CHANGELOG.md)
+[![v1.1.3](https://img.shields.io/badge/Latest_release-v1.1.3-green.svg?style=flat)](./CHANGELOG.md)
 
 All in one place to good start with VSCode. If you came from Atom/Sublime and moving to VSCode, you'll find a lot of features different from your traditional editor. But you can make compatible by one shot.
 
 #### Advantages to switch VSCode:
 
-- In build debugger for node/ react-native and almost every language.
-- More lighter than atom/ sublime
+-   In build debugger for node/ react-native and almost every language.
+-   More lighter than atom/ sublime
 
 ### Initial release with following extension:
 
@@ -42,6 +42,8 @@ Solarized Espresso Soda
 TODO Highlight
 Jest
 ProtoMaker
+Formatter Toggle
+VSCode Intellicode
 ```
 
 Extension detail: `$ code --list-extensions --show-versions`
@@ -74,6 +76,8 @@ wayou.vscode-todo-highlight
 wmaurer.change-case
 orta.vscode-jest
 vikramvk.protomaker
+tombonnike.vscode-status-bar-format-toggle
+VisualStudioExptTeam.vscodeintellicode
 ```
 
 ### User Setting (VSCode -> Preferences -> Settings -> User Settings)
@@ -82,11 +86,7 @@ vikramvk.protomaker
 {
 	"window.zoomLevel": 0,
 	"atomKeymap.promptV3Features": true,
-	"editor.formatOnPaste": false,
-	"editor.formatOnSave": true,
-	"prettier.printWidth": 120,
-	"prettier.useTabs": true,
-	"prettier.singleQuote": true,
+	"editor.formatOnPaste": true,
 	"cSpell.ignoreWords": [
 		"punchh",
 		"reactotron",
@@ -94,13 +94,17 @@ vikramvk.protomaker
 		"props",
 		"reactnative",
 		"gaurav",
+		"gauravds",
 		"sharma",
 		"redeemable",
 		"Signup",
 		"redeemables",
 		"gorm",
 		"repo",
-		"repos"
+		"repos",
+		"bson",
+		"rcvr",
+		"algo"
 	],
 	"editor.renderWhitespace": "all",
 	"editor.insertSpaces": false,
@@ -125,61 +129,90 @@ vikramvk.protomaker
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"type": "node",
-				"request": "launch",
-				"name": "adonis",
-				"program": "${workspaceFolder}/server.js"
-			},
-			{
-				"name": "Debug react native",
+				"name": "react-native",
 				"program": "${workspaceRoot}/.vscode/launchReactNative.js",
 				"type": "reactnative",
 				"request": "attach",
 				"sourceMaps": true,
-				"outDir": "${workspaceRoot}/.vscode/.react",
-				"runtimeArgs": ["--preserve-symlinks"]
+				"cwd": "${workspaceFolder}"
 			},
 			{
+				"name": "node current file",
 				"type": "node",
 				"request": "launch",
-				"name": "debug node",
 				"program": "${file}"
 			},
 			{
+				"name": "node server.js",
 				"type": "node",
 				"request": "launch",
-				"name": "Launch nodejs server.js",
 				"program": "${workspaceFolder}/server.js"
 			},
 			{
+				"name": "node attach to process",
 				"type": "node",
 				"request": "attach",
-				"name": "node attach to process",
 				"processId": "${command:PickProcess}"
 			},
 			{
+				"name": "Node: Nodemon",
 				"type": "node",
 				"request": "attach",
-				"name": "Node: Nodemon",
 				"processId": "${command:PickProcess}",
 				"restart": true,
 				"protocol": "inspector"
 			},
 			{
-				"name": "golang app.go",
-				"type": "go",
-				"request": "launch",
-				"mode": "auto",
-				"program": "${workspaceRoot}/app.go",
-				"env": {},
-				"args": []
-			},
-			{
-				"name": "golang",
+				"name": "golang current file",
 				"type": "go",
 				"request": "launch",
 				"mode": "debug",
 				"program": "${file}"
+			},
+			{
+				"name": "golang main.go",
+				"type": "go",
+				"request": "launch",
+				"mode": "debug",
+				"program": "${workspaceRoot}/main.go",
+				"env": {},
+				"args": [],
+				"trace": "error"
+			},
+			{
+				"name": "golang main.go cli",
+				"type": "go",
+				"request": "launch",
+				"mode": "debug",
+				"program": "${workspaceRoot}/main.go",
+				"env": {},
+				"args": ["cli"],
+				"trace": "error"
+			},
+			{
+				"name": "server: golang main.go",
+				"type": "go",
+				"request": "launch",
+				"mode": "debug",
+				"program": "${workspaceRoot}/main.go",
+				"env": {
+					"INSTANCE_TYPE": "server"
+				},
+				"args": [],
+				"trace": "error"
+			},
+			{
+				"name": "worker@3001: golang main.go",
+				"type": "go",
+				"request": "launch",
+				"mode": "debug",
+				"program": "${workspaceRoot}/main.go",
+				"env": {
+					"INSTANCE_TYPE": "worker",
+					"PORT": "3001"
+				},
+				"args": [],
+				"trace": "error"
 			}
 		]
 	},
@@ -187,7 +220,6 @@ vikramvk.protomaker
 	"workbench.colorTheme": "Solarized Espresso Soda",
 	"editor.minimap.enabled": false,
 	"breadcrumbs.enabled": true,
-	"prettier.disableLanguages": ["vue", "html"],
 	"liveServer.settings.donotShowInfoMsg": true,
 	"liveServer.settings.donotVerifyTags": true,
 	"editor.suggestSelection": "first",
@@ -195,7 +227,40 @@ vikramvk.protomaker
 	"java.errors.incompleteClasspath.severity": "ignore",
 	"java.configuration.checkProjectSettingsExclusions": false,
 	"javascript.suggest.autoImports": false,
-	"terminal.integrated.shell.osx": "/bin/bash"
+	"terminal.integrated.shell.osx": "/bin/bash",
+	"telemetry.enableTelemetry": false,
+	"telemetry.enableCrashReporter": false,
+	"update.showReleaseNotes": false,
+	"update.mode": "manual",
+	"editor.formatOnSave": true,
+	"go.formatTool": "gofmt",
+	"go.docsTool": "guru",
+	"go.useLanguageServer": true,
+	"go.inferGopath": false,
+	"go.buildOnSave": "off",
+	"go.delveConfig": {
+		"dlvLoadConfig": {
+			"followPointers": true,
+			"maxVariableRecurse": 1,
+			"maxStringLen": 1024,
+			"maxArrayValues": 64,
+			"maxStructFields": -1
+		},
+		"debug.openDebug": "openOnDebugBreak",
+		"apiVersion": 2,
+		"showGlobalVariables": true
+	},
+	"go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+	"go.useCodeSnippetsOnFunctionSuggest": true,
+	"go.autocompleteUnimportedPackages": true,
+	"editor.gotoLocation.multiple": "goto",
+	"prettier.disableLanguages": ["htm", "html", "yml", "yaml"],
+	"prettier.printWidth": 120,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	"go.lintOnSave": "workspace",
+	"go.testFlags": ["-count=1", "-v"],
+	"editor.formatOnType": true
 }
 ```
 
@@ -204,17 +269,6 @@ vikramvk.protomaker
 ```json
 [
 	{
-		"mac": "cmd+k",
-		"win": "ctrl+k",
-		"linux": "ctrl+k",
-		"key": "cmd+k",
-		"command": "workbench.debug.panel.action.clearReplAction",
-		"when": "inDebugRepl"
-	},
-	{
-		"mac": "cmd+j",
-		"win": "ctrl+j",
-		"linux": "ctrl+j",
 		"key": "cmd+j",
 		"command": "workbench.action.togglePanel"
 	}
@@ -232,7 +286,6 @@ vikramvk.protomaker
 			" * Copyright (c) 2017-Present, Punchh, Inc.",
 			" * All rights reserved.",
 			" *",
-			" * @flow",
 			" */",
 			"'use strict';"
 		]
@@ -265,6 +318,21 @@ vikramvk.protomaker
 			"",
 			"export default ${1:export};"
 		]
+	},
+	"Default react-native header": {
+		"prefix": "gds",
+		"body": [
+			"/**",
+			" * Copyright (c) 2017-Present, Gaurav D. Sharma",
+			" * All rights reserved.",
+			" *",
+			" */",
+			"'use strict';"
+		]
+	},
+	"main Go body": {
+		"prefix": "f_main",
+		"body": ["package main", "", "func main() {", "	$1", "}"]
 	}
 }
 ```

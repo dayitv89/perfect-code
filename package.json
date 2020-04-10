@@ -2,7 +2,7 @@
 	"name": "perfect-code",
 	"displayName": "perfect-code",
 	"description": "Perfect start for all in one vs code",
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"publisher": "gauravds",
 	"engines": {
 		"vscode": "^1.35.1"
@@ -62,7 +62,9 @@
 		"wayou.vscode-todo-highlight",
 		"wmaurer.change-case",
 		"orta.vscode-jest",
-		"vikramvk.protomaker"
+		"vikramvk.protomaker",
+		"tombonnike.vscode-status-bar-format-toggle",
+		"VisualStudioExptTeam.vscodeintellicode"
 	],
 	"contributes": {
 		"snippets": [
